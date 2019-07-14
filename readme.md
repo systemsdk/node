@@ -25,5 +25,5 @@ node:
 Based on the popular Alpine Linux project. Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
 ## Links
-[PHP Laravel environment](https://github.com/dimadeush/docker-apache-php-laravel.git)
-[PHP Symfony environment](https://github.com/dimadeush/docker-apache-php-symfony.git)
+* [PHP Laravel environment](https://github.com/dimadeush/docker-apache-php-laravel.git)
+* [PHP Symfony environment](https://github.com/dimadeush/docker-apache-php-symfony.git)
