@@ -1,5 +1,5 @@
 # Node environment
-Docker environment with node 16 for Laravel/Symfony (based on official node docker hub repository).
+Docker environment with node 16 for Symfony/Laravel (based on official node docker hub repository).
 
 [Source code](https://github.com/systemsdk/node.git)
 
@@ -9,18 +9,18 @@ Docker environment with node 16 for Laravel/Symfony (based on official node dock
 
 ## Integration to your environment
 1. Add next service to your docker-compose.yml:
-    ```
-    node:
-      image: systemsdk/node
-      platform: linux/x86_64
-      user: node
-      container_name: node
-      expose:
-        - "8081"
-      volumes:
-        - ./:/var/www/html:delegated
-      command: npm run watch
-    ```
+```bash
+node:
+  image: systemsdk/node
+  platform: linux/x86_64
+  user: node
+  container_name: node
+  expose:
+    - "8081"
+  volumes:
+    - ./:/var/www/html:delegated
+  command: npm run watch
+```
 2. Copy necessary rows from Makefile(which are commented) to your Makefile
 3. Build and run the project
 
