@@ -1,15 +1,17 @@
 build:
-	@docker build -t dimadeush/node . --no-cache
+	@docker build -t systemsdk/node . --no-cache
 
 
 # Copy bellow rows to your environment and uncomment(edit if necessary) it after node integration
 
-#dir=${CURDIR}
-#project=-p laravel
-#serviceNode=dimadeush/node
+#NODE_USER := -u node
+#PROJECT := -p laravel
+
+#ssh-node:
+#	docker-compose $(PROJECT) exec node /bin/sh
 
 #exec-node:
-#	@docker run -t -v $(dir):/var/www/html $(serviceNode) $$cmd
+#	@docker-compose $(PROJECT) exec $(NODE_USER) node /bin/sh -c "$(cmd)"
 
 #npm-install:
 #	@make exec-node cmd="npm i"
@@ -30,4 +32,4 @@ build:
 #	@make exec-node cmd="npm run watch"
 
 #logs-node:
-#	@docker-compose $(project) logs node
+#	@docker logs -f node

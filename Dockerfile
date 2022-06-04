@@ -1,3 +1,3 @@
-FROM node:10-alpine
+FROM node:16-alpine
 
 WORKDIR /var/www/html

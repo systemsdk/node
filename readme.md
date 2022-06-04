@@ -1,7 +1,7 @@
 # Node environment
-Docker environment with node 10 for Laravel/Symfony (based on official node docker hub repository).
+Docker environment with node 16 for Laravel/Symfony (based on official node docker hub repository).
 
-[Source code](https://github.com/dimadeush/node.git)
+[Source code](https://github.com/systemsdk/node.git)
 
 ## Requirements
 * Docker version 18.06 or later
@@ -11,13 +11,14 @@ Docker environment with node 10 for Laravel/Symfony (based on official node dock
 1. Add next service to your docker-compose.yml:
     ```
     node:
-      image: dimadeush/laravel-node
+      image: systemsdk/node
+      platform: linux/x86_64
       user: node
       container_name: node
       expose:
         - "8081"
       volumes:
-        - ./:/var/www/html
+        - ./:/var/www/html:delegated
       command: npm run watch
     ```
 2. Copy necessary rows from Makefile(which are commented) to your Makefile
@@ -27,5 +28,5 @@ Docker environment with node 10 for Laravel/Symfony (based on official node dock
 Based on the popular Alpine Linux project. Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
 ## Links
-* [PHP Laravel environment](https://github.com/dimadeush/docker-apache-php-laravel.git)
-* [PHP Symfony environment](https://github.com/dimadeush/docker-apache-php-symfony.git)
+* [PHP Laravel environment](https://github.com/systemsdk/docker-apache-php-laravel.git)
+* [PHP Symfony environment](https://github.com/systemsdk/docker-apache-php-symfony.git)
